@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("apps.authentication.urls")), # Auth routes - login / register
-    path("", include("apps.home.urls")),
+    path("", include("home.urls")),
     path('api/', include('api.urls')),
 
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
