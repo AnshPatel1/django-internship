@@ -1,0 +1,22 @@
+<table border="1">
+    <tr>
+        <td>SR NO</td>
+        <td>COURSE ID</td>
+        <td>NAME</td>
+        <td>ABBR</td>
+        <td>DEPARTMENT</td>
+        <td>TYPE</td>
+        <td>TOTAL SEMS</td>
+    </tr>
+    {% for course in courses %}
+    <tr>
+        <td>{{ course.id }}</td>
+        <td>{{ course.course_id }}</td>
+        <td>{{ course.name }}</td>
+        <td>{{ course.abbreviation }}</td>
+        <td>{{ course.department.name }}</td>
+        <td>{{ course.type.degree_level }}</td>
+        <td>{{ course.total_semesters }}</td>
+    </tr>
+    {% endfor %}
+</table>
